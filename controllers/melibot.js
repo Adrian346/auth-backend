@@ -1,15 +1,16 @@
 const { response } = require("express")
 
-const receiveNotificacion = (req, res = respone) => {
-
-    console.log(req.body);
+const receiveCode = (req, res = respone) => {
 
     res.json({
-        msg: 'ok',
+        message: 'token',
     });
 }
 
-const response200 = (req, res = response) => {
+const receiveNotificacion = (req, res = response) => {
+
+    console.log(req.body);
+
     res.status(200).json({
         message: 'ok',
     })
@@ -17,6 +18,6 @@ const response200 = (req, res = response) => {
 
 
 module.exports = {
+    receiveCode,
     receiveNotificacion,
-    response200,
 }
